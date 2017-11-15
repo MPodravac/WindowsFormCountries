@@ -140,5 +140,39 @@ namespace WindowsFormsCountries
 
             }
         }
+
+        private void btnPretrazi_Click(object sender, EventArgs e)
+        {
+            string sPretraga = inptPretrazi.Text;
+            var vPretraga = from c in lCountries where c.sName.Contains(sPretraga) select c;
+            List<Country> lPretrazeneDrzave = vPretraga.ToList();
+            dataGridViewCountries.DataSource = lPretrazeneDrzave.OrderBy(o => o.sName).ToList();
+        }
+
+        private void comboBoxKontinent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //čitanje odabrane vrijednosti
+            string sKontinent = (string)comboBoxKontinent.SelectedItem;
+
+            lCountries = GetCountries();
+            if (sKontinent != "Svi kontinenti")
+            {
+                lCountries = lCountries.Where(o => o.sRegion == sKontinent).ToList();
+                dataGridViewCountries.DataSource = lCountries;
+            }
+            else
+            {
+                dataGridViewCountries.DataSource = lCountries;
+            }
+        }
+
+        /*private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            string sKod = inptKod.Text;
+            string sNaziv = inptNaziv.Text;
+            string sGlGrad = inptGlavniGrad.Text;
+            string nBrStanovnika = inptBrojStanovnika.Text;
+            string fPovrsina = inptPovrsina.Text;
+        }*/
     }
 }
