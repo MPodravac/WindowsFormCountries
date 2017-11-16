@@ -41,25 +41,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnPretrazi = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.inptPretrazi = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBoxKontinent = new System.Windows.Forms.ComboBox();
+            this.btnSpremi = new System.Windows.Forms.Button();
+            this.inptPovrsina = new System.Windows.Forms.TextBox();
+            this.inptBrojStanovnika = new System.Windows.Forms.TextBox();
+            this.inptGlavniGrad = new System.Windows.Forms.TextBox();
+            this.inptNaziv = new System.Windows.Forms.TextBox();
+            this.inptKod = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.inptPretrazi = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnPretrazi = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.inptKod = new System.Windows.Forms.TextBox();
-            this.inptNaziv = new System.Windows.Forms.TextBox();
-            this.inptGlavniGrad = new System.Windows.Forms.TextBox();
-            this.inptBrojStanovnika = new System.Windows.Forms.TextBox();
-            this.inptPovrsina = new System.Windows.Forms.TextBox();
-            this.btnSpremi = new System.Windows.Forms.Button();
-            this.comboBoxKontinent = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCountries)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -183,6 +183,32 @@
             this.tabPage1.Text = "Pregled";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnPretrazi
+            // 
+            this.btnPretrazi.Location = new System.Drawing.Point(6, 194);
+            this.btnPretrazi.Name = "btnPretrazi";
+            this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
+            this.btnPretrazi.TabIndex = 7;
+            this.btnPretrazi.Text = "Pretraži";
+            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 149);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Pretraga po državama";
+            // 
+            // inptPretrazi
+            // 
+            this.inptPretrazi.Location = new System.Drawing.Point(6, 168);
+            this.inptPretrazi.Name = "inptPretrazi";
+            this.inptPretrazi.Size = new System.Drawing.Size(188, 20);
+            this.inptPretrazi.TabIndex = 5;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.comboBoxKontinent);
@@ -206,6 +232,114 @@
             this.tabPage2.Text = "Unos";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // comboBoxKontinent
+            // 
+            this.comboBoxKontinent.FormattingEnabled = true;
+            this.comboBoxKontinent.Location = new System.Drawing.Point(140, 155);
+            this.comboBoxKontinent.Name = "comboBoxKontinent";
+            this.comboBoxKontinent.Size = new System.Drawing.Size(131, 21);
+            this.comboBoxKontinent.TabIndex = 13;
+            this.comboBoxKontinent.SelectedIndexChanged += new System.EventHandler(this.comboBoxKontinent_SelectedIndexChanged);
+            // 
+            // btnSpremi
+            // 
+            this.btnSpremi.Location = new System.Drawing.Point(30, 200);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(241, 30);
+            this.btnSpremi.TabIndex = 12;
+            this.btnSpremi.Text = "SPREMI";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
+            // 
+            // inptPovrsina
+            // 
+            this.inptPovrsina.Location = new System.Drawing.Point(140, 131);
+            this.inptPovrsina.Name = "inptPovrsina";
+            this.inptPovrsina.Size = new System.Drawing.Size(131, 20);
+            this.inptPovrsina.TabIndex = 10;
+            // 
+            // inptBrojStanovnika
+            // 
+            this.inptBrojStanovnika.Location = new System.Drawing.Point(140, 105);
+            this.inptBrojStanovnika.Name = "inptBrojStanovnika";
+            this.inptBrojStanovnika.Size = new System.Drawing.Size(131, 20);
+            this.inptBrojStanovnika.TabIndex = 9;
+            // 
+            // inptGlavniGrad
+            // 
+            this.inptGlavniGrad.Location = new System.Drawing.Point(140, 79);
+            this.inptGlavniGrad.Name = "inptGlavniGrad";
+            this.inptGlavniGrad.Size = new System.Drawing.Size(131, 20);
+            this.inptGlavniGrad.TabIndex = 8;
+            // 
+            // inptNaziv
+            // 
+            this.inptNaziv.Location = new System.Drawing.Point(140, 53);
+            this.inptNaziv.Name = "inptNaziv";
+            this.inptNaziv.Size = new System.Drawing.Size(131, 20);
+            this.inptNaziv.TabIndex = 7;
+            // 
+            // inptKod
+            // 
+            this.inptKod.Location = new System.Drawing.Point(140, 27);
+            this.inptKod.Name = "inptKod";
+            this.inptKod.Size = new System.Drawing.Size(131, 20);
+            this.inptKod.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(27, 164);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Kontinent";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Površina";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Broj stanovnika";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Glavni grad";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Naziv";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Kod";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.webBrowser1);
@@ -225,139 +359,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(941, 454);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("https://www.openstreetmap.org", System.UriKind.Absolute);
-            // 
-            // inptPretrazi
-            // 
-            this.inptPretrazi.Location = new System.Drawing.Point(6, 168);
-            this.inptPretrazi.Name = "inptPretrazi";
-            this.inptPretrazi.Size = new System.Drawing.Size(188, 20);
-            this.inptPretrazi.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Pretraga po državama";
-            // 
-            // btnPretrazi
-            // 
-            this.btnPretrazi.Location = new System.Drawing.Point(6, 194);
-            this.btnPretrazi.Name = "btnPretrazi";
-            this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
-            this.btnPretrazi.TabIndex = 7;
-            this.btnPretrazi.Text = "Pretraži";
-            this.btnPretrazi.UseVisualStyleBackColor = true;
-            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Kod";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Naziv";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 86);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Glavni grad";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 112);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Broj stanovnika";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Površina";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 164);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Kontinent";
-            // 
-            // inptKod
-            // 
-            this.inptKod.Location = new System.Drawing.Point(140, 27);
-            this.inptKod.Name = "inptKod";
-            this.inptKod.Size = new System.Drawing.Size(131, 20);
-            this.inptKod.TabIndex = 6;
-            // 
-            // inptNaziv
-            // 
-            this.inptNaziv.Location = new System.Drawing.Point(140, 53);
-            this.inptNaziv.Name = "inptNaziv";
-            this.inptNaziv.Size = new System.Drawing.Size(131, 20);
-            this.inptNaziv.TabIndex = 7;
-            // 
-            // inptGlavniGrad
-            // 
-            this.inptGlavniGrad.Location = new System.Drawing.Point(140, 79);
-            this.inptGlavniGrad.Name = "inptGlavniGrad";
-            this.inptGlavniGrad.Size = new System.Drawing.Size(131, 20);
-            this.inptGlavniGrad.TabIndex = 8;
-            // 
-            // inptBrojStanovnika
-            // 
-            this.inptBrojStanovnika.Location = new System.Drawing.Point(140, 105);
-            this.inptBrojStanovnika.Name = "inptBrojStanovnika";
-            this.inptBrojStanovnika.Size = new System.Drawing.Size(131, 20);
-            this.inptBrojStanovnika.TabIndex = 9;
-            // 
-            // inptPovrsina
-            // 
-            this.inptPovrsina.Location = new System.Drawing.Point(140, 131);
-            this.inptPovrsina.Name = "inptPovrsina";
-            this.inptPovrsina.Size = new System.Drawing.Size(131, 20);
-            this.inptPovrsina.TabIndex = 10;
-            // 
-            // btnSpremi
-            // 
-            this.btnSpremi.Location = new System.Drawing.Point(30, 200);
-            this.btnSpremi.Name = "btnSpremi";
-            this.btnSpremi.Size = new System.Drawing.Size(241, 30);
-            this.btnSpremi.TabIndex = 12;
-            this.btnSpremi.Text = "SPREMI";
-            this.btnSpremi.UseVisualStyleBackColor = true;
-            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
-            // 
-            // comboBoxKontinent
-            // 
-            this.comboBoxKontinent.FormattingEnabled = true;
-            this.comboBoxKontinent.Location = new System.Drawing.Point(140, 155);
-            this.comboBoxKontinent.Name = "comboBoxKontinent";
-            this.comboBoxKontinent.Size = new System.Drawing.Size(131, 21);
-            this.comboBoxKontinent.TabIndex = 13;
             // 
             // Form1
             // 

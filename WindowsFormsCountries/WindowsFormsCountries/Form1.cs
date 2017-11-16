@@ -43,6 +43,8 @@ namespace WindowsFormsCountries
                     "Povrsina"
                 };
             comboBoxSort.DataSource = lSortCriterias;
+
+            comboBoxKontinent.DataSource = lRegions;
         }
         public List<Country> GetCountries()
         {
@@ -154,8 +156,38 @@ namespace WindowsFormsCountries
             string sKod = inptKod.Text;
             string sNaziv = inptNaziv.Text;
             string sGlGrad = inptGlavniGrad.Text;
-            string nBrStanovnika = inptBrojStanovnika.Text;
-            string fPovrsina = inptPovrsina.Text;
+            int nBrStanovnika = Convert.ToInt32(inptBrojStanovnika.Text);
+            float fPovrsina = Convert.ToSingle(inptPovrsina.Text);
+            string sKontinent = comboBoxKontinent.Text;
+
+            Country Country = new Country()
+            {
+                sCode = sKod,
+                sName = sNaziv,
+                sCapital = sGlGrad,
+                nPopulation = nBrStanovnika,
+                fArea = fPovrsina,
+                sRegion = sKontinent,
+            };
+
+            lCountries.Add(Country);
+            dataGridViewCountries.DataSource = lCountries;
+        }
+
+        private void comboBoxKontinent_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sRegion = (string)comboBoxKontinent.SelectedItem;
+
+            lCountries = GetCountries();
+            if (sRegion != "Svi kontinenti")
+            {
+                lCountries = lCountries.Where(o => o.sRegion == sRegion).ToList();
+                dataGridViewCountries.DataSource = lCountries;
+            }
+            else
+            {
+                dataGridViewCountries.DataSource = lCountries;
+            }
         }
     }
 }
